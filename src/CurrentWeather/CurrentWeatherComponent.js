@@ -9,11 +9,11 @@ class CurrentWeather extends Component {
             city:'',
             country: ''
         };
-        this.getMyLocation = this.getMyLocation.bind(this);
+      //  this.getMyLocation = this.getMyLocation.bind(this);
     };
 
     componentDidMount(){
-        this.getMyLocation();
+     //   this.getMyLocation();
     }
 
     getMyLocation() {
