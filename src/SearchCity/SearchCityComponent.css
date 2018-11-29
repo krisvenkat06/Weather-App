@@ -1,3 +1,9 @@
 .search-panel{
     background-color: #d3d3d3;
+    padding: 5px;
+}
+
+.searchinput{
+    margin: 5px;
+    border: none;
 }

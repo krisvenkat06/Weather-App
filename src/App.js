@@ -11,8 +11,8 @@ class App extends Component {
         <header className="App-header">
         <TitleComponent name="Weather"/>
         </header>
-          <SearchComponent getMyLocation={this.getMyLocation}/>
-          <CurrentWeather city="Chennai" />
+          <SearchComponent />
+          <CurrentWeather city="Chennai"/>
       </div>
     );
   }

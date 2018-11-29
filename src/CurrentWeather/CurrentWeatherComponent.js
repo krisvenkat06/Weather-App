@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import getcurrentWeather from '../API/current';
 
 class CurrentWeather extends Component {
     constructor(props) {
@@ -9,11 +10,17 @@ class CurrentWeather extends Component {
             city:'',
             country: ''
         };
-      //  this.getMyLocation = this.getMyLocation.bind(this);
+        this.getMyLocation = this.getMyLocation.bind(this);
     };
 
     componentDidMount(){
-     //   this.getMyLocation();
+        this.getMyLocation();
+    }
+
+    getWeather(value){
+        getcurrentWeather(value).then(data => {
+            console.log(data);
+        });
     }
 
     getMyLocation() {
@@ -27,6 +34,7 @@ class CurrentWeather extends Component {
                     longtitude : longt
                 })
                 console.log(this.state);
+                this.getWeather(this.state);
             }, (error) => {
                 this.setState({
                    city: 'Atlanta',
